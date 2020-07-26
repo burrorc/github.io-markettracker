@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarketTracker</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    
+  </head>
+  <body>
+    <div style="height: 40px;" id="top"></div>
+    <nav
+      class="navbar navbar-expand-md navbar-dark py-0 fixed-top"
+      style="background-color: #191919;"
+      
+    >
+      <a
+        class="navbar-brand"
+        href="#"
+        style="
+          font-family: 'Carter one';
+          color: #02a121;
+          font-size: 30px;
+          padding: 0px;
+        "
+        >MT</a
+      >
+      <button
+        id="closeMe"
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#top" style="color: #02a121;">Top</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#stockLink" style="color: #02a121;">Stocks</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#contact" style="color: #02a121;">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="masthead">
+      <div
+        class="container-fluid"
+        style="
+          background-image: url('headerimgedit.jpg');
+          height: 70vh;
+          align-items: center;
+        "
+      >
+        <div class="row justify-content-around h-100">
+          <div
+            class="col-sm-12 col-md-6 col-lg-3 align-self-center offset-lg-1"
+            style="color: #02a121;"
+          >
+            <h1 style="font-family: 'Carter one'; font-size: 50px;">
+              MarketTracker
+            </h1>
+            <h3>Keeping you current on the latest market trends</h3>
+          </div>
+          <div class="col-md-6 col-lg-5 align-self-center pt-md-5">
+            <div class="form-row">
+              <div class="col-8">
+                <input
+                  id="symbolInput"
+                  type="text"
+                  class="form-control"
+                  placeholder="Search By Symbol"
+                />
+              </div>
+              <div class="col-4">
+                <button
+                  id="getInfo"
+                  class="btn btn-block btn-success"
+                  onclick="getSymbol()"
+                >
+                  Get Info
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col text-center" id="title">
+        </div>
+      </div>
+      <div id="stockLink"><span></span></div>
+      <div class="row justify-content-around" id="stocks">
+        
+      </div>
+    </main>
+    <footer id="contact" class="container-fluid">
+      <h2 style="margin-top: 6px; color: #02a121" id="contact" >Contact</h2>
+      <div class="row justify-content-around" id="contact-links">
+        <div class="col-4 text-center mb-2" style="height: 85px;">
+        <a href="mailto:robertkarelia@gmail.com">
+          <img src="emaillogo.png" alt="Email Logo"/>
+        </a>
+      </div>
+    <div class="col-4 text-center mb-2" style="height: 85px;">
+        <a href="https://github.com/burrorc">
+          <img src="githublogo4.png" alt="Github logo"/>
+      </a>
+      </div>
+        <div class="col-4 text-center mb-2" style="height: 85px;">
+        <a href="tel:5551234567">
+          <img src="phonelogo.png" alt="Phone Logo"/>
+      </a>
+      </div>
+      </div>
+      <hr
+        style="
+          border: none;
+          width: 100%;
+          background-color: #02a121;
+          height: 5px;
+        "
+      />
+      
+      <div class="row" id="copyright">
+     
+        <p>
+          © Created during bootcamp at 
+          <img src="codexlogo.png" alt="Codex Academy Logo" />
+        </p>
+      </div>
+      
+    
+    </footer>
+    <script src="scripts.js"></script>
+    
+  </body>
+</html>
